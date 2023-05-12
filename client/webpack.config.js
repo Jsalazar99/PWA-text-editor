@@ -9,15 +9,12 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      header: '.src/js/header.js',
-      editor: './src/js/editor.js',
-      database: './src/database.js'
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    // TODO: Add and configure workbox plugins for a service worker and manifest file.
+    // Add and configure workbox plugins for a service worker and manifest file.
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
@@ -34,7 +31,7 @@ module.exports = () => {
         name: 'JATE',
         short_name: 'JATE',
         description: 'Just another text editor',
-        /* background_color: '#225ca3',
+        background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: './',
         publicPath: './',
@@ -44,13 +41,13 @@ module.exports = () => {
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
-        ], */
+        ], 
       }),
 
     ],
 
     module: {
-      // TODO: Add CSS loaders and babel to webpack.
+      // Add CSS loaders and babel to webpack.
       rules: [
         {
           test: /\.css$/i,
